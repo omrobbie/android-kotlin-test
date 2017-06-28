@@ -1,5 +1,6 @@
 package com.omrobbie.kotlin
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         textView.setText("text ini di ubah dengan kotlin")
         button.setOnClickListener {
             Toast.makeText(this, "toast ini muncul dengan kotlin", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, NextActivity::class.java)
+            startActivity(intent)
         }
     }
 }
